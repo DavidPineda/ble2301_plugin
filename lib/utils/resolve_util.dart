@@ -153,6 +153,7 @@ class ResolveUtil {
     }
     heart = _hexByte2Int(value[21], 0);
     int temp = _hexByte2Int(value[22], 0) + _hexByte2Int(value[23], 1);
+    spO2 = _hexByte2Int(value[24], 0); // modify (dpineda)
     activityData[0] = step.toString();
     activityData[1] = (cal / 100).toStringAsFixed(1);
     activityData[2] = (distance / 100).toStringAsFixed(1);
