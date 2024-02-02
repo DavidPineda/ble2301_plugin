@@ -126,8 +126,8 @@ class ResolveUtil {
 
   ///实时计步信息
   static Map getActivityData(List<int> value) {
-    final List<String> activityData = List<String>.generate(6, (int index) {
-      return "";
+    final List<String> activityData = List<String>.generate(7, (int index) {
+      return ""; // Modify (dpineda)
     });
     int step = 0;
     double cal = 0;
@@ -135,6 +135,7 @@ class ResolveUtil {
     int time = 0;
     int heart = 0;
     int exerciseTime = 0;
+    int spO2 = 0; // Modify (dpineda)
     for (int i = 1; i < 5; i++) {
       step += _hexByte2Int(value[i], i - 1);
     }
@@ -158,6 +159,7 @@ class ResolveUtil {
     activityData[3] = (time / 60).toString();
     activityData[4] = heart.toString();
     activityData[5] = exerciseTime.toString();
+    activityData[6] = spO2.toString(); // modify (dpineda)
     Map mapData = {
       DeviceKey.Step: activityData[0],
       DeviceKey.Calories: activityData[1],
@@ -165,7 +167,8 @@ class ResolveUtil {
       DeviceKey.ExerciseMinutes: activityData[3],
       DeviceKey.HeartRate: activityData[4],
       DeviceKey.ActiveMinutes: activityData[5],
-      DeviceKey.TempData: temp.toStringAsFixed(1)
+      DeviceKey.TempData: temp.toStringAsFixed(1),
+      DeviceKey.bloodOxygen: activityData[6], // modify (dpineda)
     };
     Map maps = {
       DeviceKey.DataType: BleConst.RealTimeStep,
