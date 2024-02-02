@@ -169,7 +169,7 @@ class ResolveUtil {
       DeviceKey.HeartRate: activityData[4],
       DeviceKey.ActiveMinutes: activityData[5],
       DeviceKey.TempData: temp.toStringAsFixed(1),
-      DeviceKey.bloodOxygen: activityData[6], // modify (dpineda)
+      DeviceKey.BloodOxygen: activityData[6], // modify (dpineda)
     };
     Map maps = {
       DeviceKey.DataType: BleConst.RealTimeStep,

@@ -72,7 +72,7 @@ class DeviceKey {
   static const String Distance = "distance";
   static const String ExerciseMinutes = "exerciseMinutes";
   static const String HeartRate = "heartRate";
-  static const String bloodOxygen = "bloodOxygen"; // modify (dpineda)
+  static const String BloodOxygen = "bloodOxygen"; // modify (dpineda)
   static const String ActiveMinutes = "ExerciseTime";
   static const String TempData = "TempData";
   static const String StepGoal = "stepGoal"; // 目标步数值  GET_GOAL
